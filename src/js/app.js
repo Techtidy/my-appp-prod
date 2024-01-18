@@ -85,7 +85,19 @@ function searchOnGoogleMaps() {
 searchOnGoogleMaps.init();
 
 //npm install eslint-plugin-react@latest --save-dev
-//npx eslint "D:\vs folders\today\Src\js\app.js"
+//npx eslint "C:\xampp\htdocs\orig3\src"
 
 //npm install --save -dev jest
 // npx jest "D:\vs folders\today\Src\js\app.js"
+
+function captureImage() {
+    var canvas = document.getElementById('canvas');
+    var video = document.getElementById('camera-feed');
+    var context = canvas.getContext('2d');
+
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    var imageDataUrl = canvas.toDataURL('image/jpeg');
+
+    // Now you can do whatever you want with the image data URL
+    console.log(imageDataUrl);
+}
