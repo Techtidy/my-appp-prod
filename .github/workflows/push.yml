@@ -27,17 +27,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: README
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{secrets.HTOKEN }}
-        with:
-          source_file: 'README.md'
-          destination_repo: 'Techtidy/my-appp-test'
-          user_email: 'eng21ct0007@dsu.edu.in'
-          user_name: 'hrk-2109'
-
+        
       - name: src
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
@@ -57,12 +47,12 @@ jobs:
           destination_repo: 'Techtidy/my-appp-prod'
           user_email: 'eng21ct0007@dsu.edu.in'
           user_name: 'hrk-2109'
-      - name: index
+      - name: techtidy
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{secrets.HTOKEN }}
         with:
-          source_file: 'index.html'
+          source_file: 'TechTidy Website/'
           destination_repo: 'Techtidy/my-appp-prod'
           user_email: 'eng21ct0007@dsu.edu.in'
           user_name: 'hrk-2109'
